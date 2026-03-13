@@ -42,10 +42,10 @@ svm_pipeline = ImbPipeline(build_preprocessor() + [
     ('model', SVC(probability=True, random_state=42))
 ])
 
-svm_params = {'model__C': [0.01, 0.1, 1, 10, 100],
-              'model__gamma': ['scale', 'auto', 0.001, 0.01, 0.1, 1],
-              'model__kernel': ['rbf', 'linear', 'poly'],
-              'model__degree': [2, 3]}  # For poly kernel
+svm_params = {'model__C': [0.1, 1, 10],
+              'model__gamma': ['scale', 'auto'],
+              'model__kernel': ['rbf', 'linear'],
+              'model__degree': [3]}  # For poly kernel
 
 svm_search = GridSearchCV(svm_pipeline, svm_params, cv=cv,
                           scoring='roc_auc', n_jobs=-1, verbose=1)
