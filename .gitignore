@@ -1,0 +1,26 @@
+# Virtual environment
+venv/
+machine2/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Data (if large, but keeping for now)
+# data/
+
+# Models (optional, if large)
+# models/
